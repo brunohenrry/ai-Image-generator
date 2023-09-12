@@ -1,0 +1,33 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AI Image Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Generator</h1>
+        <p>Escolha um modelo de IA e escreva um prompt para gerar imagens incríveis. Por exemplo, você pode experimentar prompts como "Uma paisagem surreal com montanhas flutuantes", "Retrato de uma cidade futurista à noite" ou "Uma cena de praia tranquila ao pôr do sol".</p>
+        <div class="model-selection">
+            <label for="model-select">Escolha o modelo de IA:</label>
+            <select id="model-select">
+                <option value="prompthero/openjourney">Modelo 1</option>
+                <option value="Meina/MeinaMix_V10">Modelo 2</option>
+                <option value="kandinsky-community/kandinsky-2-2-decoder">Modelo 3</option>
+            </select>
+        </div>
+        <form class="gen-form">
+            <input type="text" id="user-prompt" placeholder="Digite seu prompt aqui..." autocomplete="off">
+            <button type="button" id="generate">Gerar</button>
+        </form>
+        <div class="result">
+            <div id="loading">Gerando...</div>
+            <div id="image-grid"></div>
+            <button type="button" id="download" style="display: none;">Download</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
